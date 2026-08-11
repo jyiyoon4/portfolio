@@ -11,7 +11,7 @@ const About = lazy(() => import('./pages/About'));
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Suspense fallback={null}>
         <Routes>

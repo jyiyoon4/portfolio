@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import categories from '../data/categories';
+import homecategories from '../data/homecategories';
 
 function Book({ project, activeId, onActivate }) {
   // 마우스가 book 위에 있을 때만 open, 벗어나면 즉시 close.
@@ -19,7 +19,7 @@ function Book({ project, activeId, onActivate }) {
         <span className="book-number">{project.number}</span>
         <span className="book-title">{project.title}</span>
         <span className="book-category">
-          {categories[project.category] || project.category}
+          {homecategories[project.category] || project.category}
         </span>
       </Link>
 

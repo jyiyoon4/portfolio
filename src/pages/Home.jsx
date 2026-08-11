@@ -15,7 +15,7 @@ function Home() {
       <footer className="site-footer">
         <span>© 2026 WORK LIBRARY. ALL RIGHTS RESERVED.</span>
         <div>
-          <a href="#" aria-label="Instagram">
+          {/* <a href="#" aria-label="Instagram">
             Instagram
           </a>
           <a href="#" aria-label="LinkedIn">
@@ -23,7 +23,7 @@ function Home() {
           </a>
           <a href="#" aria-label="Behance">
             Behance
-          </a>
+          </a> */}
         </div>
       </footer>
     </div>

@@ -7,11 +7,14 @@
 }
 
 .shelf-row {
-  height: 496px;
+  min-height: 496px;
   padding-bottom: 16px;
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
+  align-content: flex-start;
   border-bottom: 1px solid var(--line);
+  border: 0 0 16px;
 }
 
 .book {
@@ -24,7 +27,7 @@
 }
 
 .book.is-active {
-  flex: 1 1 0;
+  flex: 0 1 1000px;
 }
 
 .book:last-child {
@@ -122,7 +125,7 @@
 
 .shelf-empty {
   display: grid;
-  grid-template-rows: repeat(4, 120px);
+  grid-auto-rows: 120px;
 }
 
 .shelf-empty div {
@@ -135,7 +138,7 @@
   }
 
   .shelf-row {
-    height: 440px;
+    min-height: 440px;
   }
 
   .book {
@@ -162,7 +165,7 @@
   }
 
   .shelf-empty {
-    grid-template-rows: repeat(4, 88px);
+    grid-auto-rows: 88px;
   }
 }
 

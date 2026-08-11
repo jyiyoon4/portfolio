@@ -4,6 +4,7 @@ const categories = {
   graphic: 'Graphic Design',
   uiux: 'UI/UX Design',
   web: 'Interactive Web',
+  d3d: '3D Graphic Design',
 };
 
 export default categories;
