@@ -1,0 +1,1 @@
+var e={product:`Product Design`,editorial:`Editorial Design`,graphic:`Graphic Design`,uiux:`UI/UX Design`,web:`Interactive Web`};export{e as t};
