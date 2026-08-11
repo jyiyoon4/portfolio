@@ -1,17 +1,9 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import categories from '../data/categories';
 
 function Book({ project, activeId, onActivate }) {
-  const [touchOpen, setTouchOpen] = useState(false);
-  const isActive = activeId === project.id || touchOpen;
-
-  const handleClick = () => {
-    if (window.matchMedia('(hover: none)').matches) {
-      setTouchOpen((current) => !current);
-      onActivate(project.id);
-    }
-  };
+  // 마우스가 book 위에 있을 때만 open, 벗어나면 즉시 close.
+  const isActive = activeId === project.id;
 
   return (
     <article
@@ -22,7 +14,6 @@ function Book({ project, activeId, onActivate }) {
       <Link
         to={`/work/${project.id}`}
         className="book-spine"
-        onClick={handleClick}
         aria-label={`Open ${project.title}`}
       >
         <span className="book-number">{project.number}</span>
