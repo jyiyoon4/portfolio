@@ -7,7 +7,7 @@ function Shelf({ projects }) {
   return (
     <section className="shelf" aria-label="Selected works">
       <div className="shelf-row">
-        {/* map(...)->프로젝트생기면 자동 생성 = 수정X */}
+        {/* map(...)->프로젝트생기면 자동 생성 = 수정 X */}
         {projects.map((project) => (
           <Book
             key={project.id}
