@@ -1,0 +1,31 @@
+.loading-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.loading-content strong {
+  font: 700 80px/1.1 var(--display);
+  letter-spacing: -0.04em;
+}
+
+.loading-content span {
+  color: var(--muted);
+  font: 500 12px/1.2 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .loading-content strong {
+    font-size: 64px;
+  }
+}
