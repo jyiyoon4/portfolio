@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Book from './Book';
+import PromoTile from './PromoTile';
 
 // 기본으로 보여줄 '빈 선반' 장식 칸 수 (책이 하나도 안 꽂혀 있을 때 기준)
 const DEFAULT_EMPTY_SLOTS = 4;
@@ -46,6 +47,7 @@ function Shelf({ projects }) {
             onActivate={setActiveId}
           />
         ))}
+        <PromoTile />
       </div>
 
       <div className="shelf-empty" aria-hidden="true">

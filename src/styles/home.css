@@ -14,20 +14,30 @@
   align-items: stretch;
   align-content: flex-start;
   border-bottom: 1px solid var(--line);
-  border: 0 0 16px;
+  /* border: 0 0 16px; */
 }
 
 .book {
   position: relative;
-  flex: 0 0 48px;
-  min-width: 48px;
+  --spine-base: 48px;
+  /* 1줄 초과분마다 '타이틀 폰트 크기 × line-height'만큼 두께 증가.
+    --spine-base 자체가 이미 '패딩*2 + 1줄' 값이라, 늘어나도 여백은 그대로 유지됨.
+    폰트 크기가 바뀌면 --title-line-size도 같이 바뀌므로 두께 증가폭도 비례해서 따라감 */
+  --title-font-size: 12px;
+  --title-line-height: 1.2;
+  --title-line-size: calc(var(--title-font-size) * var(--title-line-height));
+  --spine-width: calc(
+    var(--spine-base) + (var(--title-lines, 1) - 1) * var(--title-line-size)
+  );
+  flex: 0 0 var(--spine-width);
+  min-width: var(--spine-width);
   height: 479px;
   border-left: 1px solid var(--line);
   transition: flex-basis 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .book.is-active {
-  flex: 0 1 1000px;
+  flex: 0 0 500px;
 }
 
 .book:last-child {
@@ -38,7 +48,7 @@
   position: absolute;
   inset: 0;
   z-index: 3;
-  width: 48px;
+  width: var(--spine-width);
   padding: 16px 0;
   display: flex;
   flex-direction: column;
@@ -66,8 +76,15 @@
   top: 50%;
   left: 50%;
   width: max-content;
+  max-width: 200px; /* 추가: 이 폭을 넘으면 자동 줄바꿈 */
   transform: translate(-50%, -50%) rotate(-90deg);
   transform-origin: center;
+  white-space: normal; /* nowrap → normal로 변경 */
+  text-align: center; /* 추가: 두 줄일 때 가운데 정렬 */
+}
+
+.book-title-line {
+  display: block;
   white-space: nowrap;
 }
 
@@ -77,7 +94,7 @@
 
 .book-preview {
   position: absolute;
-  inset: 0 0 0 48px;
+  inset: 0 0 0 var(--spine-width);
   overflow: hidden;
   opacity: 0;
   transform: scale(0.985);
@@ -115,10 +132,50 @@
   letter-spacing: -0.04em;
 }
 
+.preview-title-line {
+  display: block;
+}
+
 .book-preview-overlay p {
   width: min(448px, 100%);
   margin: 16px 0 0;
   color: rgba(255, 255, 255, 0.8);
+  font: 500 12px/1.2 var(--mono);
+  letter-spacing: 0.1em;
+}
+
+.promo-tile {
+  flex: 0 0 479px;
+  height: 479px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--ink);
+  color: var(--bg);
+  border-left: 1px solid var(--line);
+  transition: opacity 220ms ease;
+}
+
+.promo-tile:hover {
+  opacity: 0.85;
+}
+
+.promo-eyebrow {
+  color: rgba(249, 249, 249, 0.55);
+  font: 500 12px/1.2 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.promo-text {
+  margin: 0;
+  font: 600 22px/1.5 var(--display);
+  letter-spacing: -0.02em;
+}
+
+.promo-more {
+  align-self: flex-end;
   font: 500 12px/1.2 var(--mono);
   letter-spacing: 0.1em;
 }

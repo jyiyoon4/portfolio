@@ -4,7 +4,7 @@ const projects = [
   {
     id: 'project-01',
     number: '01',
-    title: 'PROJECT 01',
+    title: 'PROJECT 01PROJEC llllddd',
     category: 'product',
     year: '2026',
     role: 'Designer',
@@ -306,86 +306,6 @@ const projects = [
       'Content structure, typographic studies, layout iterations, and production.',
     outcome: 'A restrained editorial system with a strong browsing rhythm.',
   },
-  // {
-  //   id: 'project-013',
-  //   number: '03',
-  //   title: 'PROJECT 03',
-  //   category: 'editorial',
-  //   year: '2026',
-  //   role: 'Designer',
-  //   description:
-  //     'An editorial project built around rhythm, typography, and information hierarchy.',
-  //   thumbnail: imagePath('project-03'),
-  //   background:
-  //     'An exploration of editorial composition and structured information.',
-  //   process:
-  //     'Content structure, typographic studies, layout iterations, and production.',
-  //   outcome: 'A restrained editorial system with a strong browsing rhythm.',
-  // },
-  // {
-  //   id: 'project-22',
-  //   number: '03',
-  //   title: 'PROJECT 03',
-  //   category: 'editorial',
-  //   year: '2026',
-  //   role: 'Designer',
-  //   description:
-  //     'An editorial project built around rhythm, typography, and information hierarchy.',
-  //   thumbnail: imagePath('project-03'),
-  //   background:
-  //     'An exploration of editorial composition and structured information.',
-  //   process:
-  //     'Content structure, typographic studies, layout iterations, and production.',
-  //   outcome: 'A restrained editorial system with a strong browsing rhythm.',
-  // },
-  // {
-  //   id: 'project-23',
-  //   number: '03',
-  //   title: 'PROJECT 03',
-  //   category: 'editorial',
-  //   year: '2026',
-  //   role: 'Designer',
-  //   description:
-  //     'An editorial project built around rhythm, typography, and information hierarchy.',
-  //   thumbnail: imagePath('project-03'),
-  //   background:
-  //     'An exploration of editorial composition and structured information.',
-  //   process:
-  //     'Content structure, typographic studies, layout iterations, and production.',
-  //   outcome: 'A restrained editorial system with a strong browsing rhythm.',
-  // },
-  // {
-  //   id: 'project-24',
-  //   number: '03',
-  //   title: 'PROJECT 03',
-  //   category: 'editorial',
-  //   year: '2026',
-  //   role: 'Designer',
-  //   description:
-  //     'An editorial project built around rhythm, typography, and information hierarchy.',
-  //   thumbnail: imagePath('project-03'),
-  //   background:
-  //     'An exploration of editorial composition and structured information.',
-  //   process:
-  //     'Content structure, typographic studies, layout iterations, and production.',
-  //   outcome: 'A restrained editorial system with a strong browsing rhythm.',
-  // },
-  // {
-  //   id: 'project-25',
-  //   number: '03',
-  //   title: 'PROJECT 03',
-  //   category: 'editorial',
-  //   year: '2026',
-  //   role: 'Designer',
-  //   description:
-  //     'An editorial project built around rhythm, typography, and information hierarchy.',
-  //   thumbnail: imagePath('project-03'),
-  //   background:
-  //     'An exploration of editorial composition and structured information.',
-  //   process:
-  //     'Content structure, typographic studies, layout iterations, and production.',
-  //   outcome: 'A restrained editorial system with a strong browsing rhythm.',
-  // },
 ];
 
 export default projects;
