@@ -67,3 +67,80 @@ function Loading() {
 }
 
 export default Loading;
+
+// import { useEffect, useState } from 'react';
+// import projects from '../data/projects';
+// import '../styles/loading.css';
+
+// function Loading({ onComplete }) {
+//   const [progress, setProgress] = useState(0);
+
+//   useEffect(() => {
+//     let timerId = null;
+//     let timeoutId = null;
+
+//     // 1. 숫자 카운트업 (0% → 100%)
+//     const startedAt = performance.now();
+//     const minimumDuration = 1600;
+
+//     const progressPromise = new Promise((resolve) => {
+//       timerId = window.setInterval(() => {
+//         const elapsed = performance.now() - startedAt;
+
+//         const timeProgress = Math.min(
+//           100,
+//           Math.floor((elapsed / minimumDuration) * 100),
+//         );
+
+//         setProgress(timeProgress);
+
+//         if (timeProgress >= 100) {
+//           window.clearInterval(timerId);
+//           resolve();
+//         }
+//       }, 16);
+//     });
+
+//     // 2. 이미지 프리로드
+//     const imagePromises = projects.map(
+//       (project) =>
+//         new Promise((resolve) => {
+//           const image = new Image();
+
+//           image.onload = image.onerror = resolve;
+//           image.src = project.thumbnail;
+//         }),
+//     );
+
+//     // 3. 100% + 이미지 로딩 완료
+//     //    → 1초 유지
+//     //    → Loading 종료
+//     Promise.all([progressPromise, ...imagePromises]).then(() => {
+//       timeoutId = window.setTimeout(() => {
+//         onComplete();
+//       }, 1000);
+//     });
+
+//     // 4. 클린업
+//     return () => {
+//       if (timerId) {
+//         window.clearInterval(timerId);
+//       }
+
+//       if (timeoutId) {
+//         window.clearTimeout(timeoutId);
+//       }
+//     };
+//   }, [onComplete]);
+
+//   return (
+//     <main className="loading-page">
+//       <div className="loading-content">
+//         <strong>{progress}%</strong>
+//         <span>OPENING ARCHIVE...</span>
+//       </div>
+//     </main>
+//   );
+// }
+
+// export default Loading;

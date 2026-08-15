@@ -39,10 +39,11 @@ function Shelf({ projects }) {
     <section className="shelf" aria-label="Selected works">
       <div className="shelf-row" ref={rowRef}>
         {/* map(...)->프로젝트생기면 자동 생성 = 수정 X */}
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <Book
             key={project.id}
             project={project}
+            index={index}
             activeId={activeId}
             onActivate={setActiveId}
           />

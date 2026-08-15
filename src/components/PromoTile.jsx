@@ -9,7 +9,7 @@ function PromoTile() {
     <Link to="/about" className="promo-tile" aria-label="More about me">
       <span className="promo-eyebrow">ABOUT</span>
       <p className="promo-text">
-        인터랙티브 웹 디자인에 관심 있는 상상대학교 학생, 윤입니다.
+        ....
       </p>
       <span className="promo-more">MORE →</span>
     </Link>

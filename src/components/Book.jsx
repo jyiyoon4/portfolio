@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import homecategories from '../data/homecategories';
 
-function Book({ project, activeId, onActivate }) {
+function Book({ project, index, activeId, onActivate }) {
   // 마우스가 book 위에 있을 때만 open, 벗어나면 즉시 close.
   const isActive = activeId === project.id;
 
@@ -21,7 +21,9 @@ function Book({ project, activeId, onActivate }) {
         className="book-spine"
         aria-label={`Open ${project.title}`}
       >
-        <span className="book-number">{project.number}</span>
+        <span className="book-number">
+          {String(index + 1).padStart(2, '0')}
+        </span>
         <span className="book-title">
           {titleLines.map((line, index) => (
             <span className="book-title-line" key={index}>

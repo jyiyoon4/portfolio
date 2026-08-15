@@ -31,3 +31,35 @@ function Home() {
 }
 
 export default Home;
+
+// import { useState } from 'react';
+// import Header from '../components/Header';
+// import Shelf from '../components/Shelf';
+// import projects from '../data/projects';
+// import '../styles/home.css';
+// import Loading from './Loading';
+
+// function Home() {
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   if (isLoading) {
+//     return <Loading onComplete={() => setIsLoading(false)} />;
+//   }
+
+//   return (
+//     <div className="page home-page">
+//       <Header />
+
+//       <main className="home-main">
+//         <Shelf projects={projects} />
+//       </main>
+
+//       <footer className="site-footer">
+//         <span>© 2026 WORK LIBRARY. ALL RIGHTS RESERVED.</span>
+//         <div></div>
+//       </footer>
+//     </div>
+//   );
+// }
+
+// export default Home;
