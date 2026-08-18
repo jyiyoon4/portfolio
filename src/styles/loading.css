@@ -3,6 +3,10 @@
   display: grid;
   place-items: center;
   background: var(--bg);
+  opacity: 1;
+  transition:
+    opacity 900ms ease,
+    transform 900ms ease;
 }
 
 .loading-content {

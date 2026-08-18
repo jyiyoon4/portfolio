@@ -9,7 +9,7 @@ const projects = [
     year: '2026',
     role: 'Designer',
     description:
-      'A product design project exploring form, usability, and material expression.',
+      'from Extra to Main',
     thumbnail: imagePath('project-01'),
     background:
       'A study of form and function developed through iterative product design.',

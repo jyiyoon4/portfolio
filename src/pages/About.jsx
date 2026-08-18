@@ -71,7 +71,7 @@ function About() {
 
         <section className="about-connect">
           <span className="eyebrow">CONNECT . 05</span>
-          <a href="mailto:jjj333@gmail.com">jjj333@gmail.com</a>
+          <a href="mailto:jyiyoon.design@gmail.com">jyiyoon.design@gmail.com</a>
         </section>
       </main>
 

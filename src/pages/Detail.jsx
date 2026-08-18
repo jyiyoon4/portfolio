@@ -15,7 +15,7 @@ function Detail() {
         <Header />
         <main>
           <h1>PROJECT NOT FOUND</h1>
-          <Link to="/work">BACK TO WORK</Link>
+          <Link to="/">BACK TO WORK</Link>
         </main>
       </div>
     );
@@ -110,7 +110,7 @@ function ProjectPager({ previous, next }) {
         <strong>{previous.title}</strong>
       </Link>
 
-      <Link to="/work" className="pager-center">
+      <Link to="/" className="pager-center">
         <span className="pager-mark">+</span>
         <span className="eyebrow">BACK TO WORK</span>
       </Link>
