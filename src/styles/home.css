@@ -26,7 +26,7 @@
   align-items: stretch;
   align-content: flex-start;
   border-bottom: 1px solid var(--line);
-  /* border: 0 0 16px; */
+  row-gap: 24px;
 }
 
 .book {
@@ -156,8 +156,10 @@
   letter-spacing: 0.1em;
 }
 
+/* -------------------------------------------------------- */
+
 .promo-tile {
-  flex: 0 0 479px;
+  flex: 0 0 300px;
   height: 479px;
   padding: 32px;
   display: flex;

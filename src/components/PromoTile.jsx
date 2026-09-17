@@ -8,9 +8,8 @@ function PromoTile() {
   return (
     <Link to="/about" className="promo-tile" aria-label="More about me">
       <span className="promo-eyebrow">ABOUT</span>
-      <p className="promo-text">
-        ....
-      </p>
+      <p className="promo-text">안녕하세요.</p>
+      <p className="promo-text">디자이너 정지윤입니다.</p>
       <span className="promo-more">MORE →</span>
     </Link>
   );
